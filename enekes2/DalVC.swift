@@ -28,6 +28,18 @@ class DalVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(self.respondToSwipeGesture))
+        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(self.respondToSwipeGesture))
+        
+        swipeRight.direction = UISwipeGestureRecognizerDirection.right
+        swipeLeft.direction = UISwipeGestureRecognizerDirection.left
+        
+        
+        
+        self.view.addGestureRecognizer(swipeRight)
+        self.view.addGestureRecognizer(swipeLeft)
+        
+        
         enekszamFejlecInt = Int(enekSzamFejlec)!
         enekSzamFejlecLabel.text = "\(enekszamFejlecInt!).Ének"
         
@@ -587,6 +599,13 @@ class DalVC: UIViewController {
         
         dismiss(animated: true, completion: nil)
     }
+    
+    func respondToSwipeGesture(gesture: UIGestureRecognizer) {
+        
+        dismiss(animated: true, completion: nil)
+        
+    }
+
     
     
     
