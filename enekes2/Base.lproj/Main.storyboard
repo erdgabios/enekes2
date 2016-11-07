@@ -146,7 +146,7 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Jny-yP-mlE">
                                                         <rect key="frame" x="0.0" y="55.5" width="375" height="50"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZfJ-vP-Wae" userLabel="Tick">
+                                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZfJ-vP-Wae" userLabel="Tick">
                                                                 <rect key="frame" x="0.0" y="0.0" width="121.5" height="50"/>
                                                                 <state key="normal" image="Tick"/>
                                                                 <connections>
@@ -161,7 +161,7 @@
                                                                     <action selector="numberPressedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="E4A-aJ-44D"/>
                                                                 </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PmJ-Vd-h2e" userLabel="Delete">
+                                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PmJ-Vd-h2e" userLabel="Delete">
                                                                 <rect key="frame" x="253.5" y="0.0" width="121.5" height="50"/>
                                                                 <state key="normal" image="Delete"/>
                                                                 <connections>
