@@ -10,12 +10,27 @@ import UIKit
 
 class MainVC: UIViewController {
 
-        
+    
+    
+    
         var _runningNumber: String!
         var _runningNumberInt: Int!
         var _length: Int!
         var _lastChar: String!
-        
+        var _numberLabelmidle: String!
+    
+    var numberLabelmidle: String {
+        get {
+            if _numberLabelmidle == nil {
+                _numberLabelmidle = ""
+            }
+            return _numberLabelmidle
+        }
+        set {
+            _numberLabelmidle = newValue
+        }
+    }
+    
         var runningNumberInt: Int {
             get {
                 if _runningNumberInt == nil {
@@ -65,6 +80,9 @@ class MainVC: UIViewController {
                 _length = newValue
             }
         }
+    
+    
+    
         
     
     @IBOutlet weak var azEnekSzamaLabel: UILabel!
@@ -125,7 +143,10 @@ class MainVC: UIViewController {
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         
         if runningNumberInt > 0 && runningNumberInt < 513 && runningNumber != "0" && runningNumber != "00" && length > 0 && numberLabel.text != nil {
-            
+            numberLabelmidle = numberLabel.text!
+            numberLabel.text = ""
+            runningNumber = ""
+            length = 0
             return true
             
         } else {
@@ -137,11 +158,15 @@ class MainVC: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         let DestVC: DalVC = segue.destination as! DalVC
-        DestVC.enekSzamFejlec = numberLabel.text!
+        DestVC.enekSzamFejlec = numberLabelmidle
         azEnekSzamaLabel.textColor = UIColor.black
         
         
+        
+        
     }
+    
+    
 
 }
 

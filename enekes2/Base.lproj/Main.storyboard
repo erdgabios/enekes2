@@ -240,7 +240,9 @@
                                             <constraint firstAttribute="height" constant="27" id="XOC-7W-2jD"/>
                                             <constraint firstAttribute="width" constant="72" id="a1d-Tu-Tsq"/>
                                         </constraints>
-                                        <state key="normal" image="Pin Left"/>
+                                        <state key="normal" image="Pin Left">
+                                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="backChevronButton:" destination="VCU-7Q-5e8" eventType="touchUpInside" id="dPb-I6-Dux"/>
                                         </connections>

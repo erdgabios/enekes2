@@ -10,6 +10,11 @@ import UIKit
 
 class DalVC: UIViewController {
     
+
+    
+    
+    
+
     var enekSzamFejlec = String()
     var enekszamFejlecInt: Int!
 
@@ -26,6 +31,8 @@ class DalVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         
         let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(self.respondToSwipeGesture))
         let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(self.respondToSwipeGesture))
@@ -623,7 +630,12 @@ class DalVC: UIViewController {
     
     @IBAction func backChevronButton(_ sender: Any) {
         
+        
         dismiss(animated: true, completion: nil)
+        
+        
+        
+        
     }
     
     func respondToSwipeGesture(gesture: UIGestureRecognizer) {
